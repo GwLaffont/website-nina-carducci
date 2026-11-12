@@ -5,8 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Author: Nina Carducci, Illustrator: Nina Carducci"
+      content="Nina Carducci, Photographe à Bordeaux, se déplace en Île-de-France pour prendre vos photos."
     />
+
+    <!-- Open graph card-->
+    <meta property="og:site_name" content="ninacarducci" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://gwlaffont.github.io/website-nina-carducci/"
+    />
+    <meta
+      property="og:title"
+      content="Nina Carducci - Photographe à Bordeaux"
+    />
+    <meta
+      property="og:description"
+      content="Immortalisez vos meilleurs moments"
+    />
+    <meta
+      property="og:image"
+      content="https://gwlaffont.github.io/website-nina-carducci/assets/images/nina.webp"
+    />
+    <!-- Open graph card-->
+    <!-- Twitter card-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@monCompteTwitter" />
+    <meta
+      name="twitter:title"
+      content="Nina Carducci - Photographe à Bordeaux"
+    />
+    <meta
+      name="twitter:description"
+      content="Immortalisez vos meilleurs moments"
+    />
+    <meta
+      name="twitter:image"
+      content="https://gwlaffont.github.io/website-nina-carducci/assets/images/nina.webp"
+    />
+    <meta
+      name="twitter:url"
+      content="https://gwlaffont.github.io/website-nina-carducci/"
+    />
+    <!-- Twitter card-->
+
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,9 +59,12 @@
     />
     <meta charset="UTF-8" />
   </head>
-  <body>
+  <body itemscope itemtype="https://schema.org/LocalBusiness">
+    <time itemprop="openingHours" datetime="Mo,Tu,We,Th,Fr 10:00-19:00"
+      >Du lundi au Vendredi, de 10 à 19 heures.</time
+    >.
     <header class="top-header">
-      <h3 class="name">Nina Carducci</h3>
+      <h1 class="name" itemprop="employee">Nina Carducci</h1>
       <nav class="nav">
         <ul>
           <li><a href="#about">À propos</a></li>
@@ -123,13 +168,13 @@
           />
         </section>
         <section id="about-me">
-          <h3 class="about-me__title">A propos de moi</h3>
-          <h6 class="about-me__introduction">
+          <h2 class="about-me__title">A propos de moi</h2>
+          <div class="about-me__introduction">
             Devenir photographe était pour moi une évidence. Comme si j’y étais
             prédestiné. Saisir un moment, une émotion, une situation, un
             endroit, une lumière et les rendre immortels, voilà ce qui me fait
             vibrer.
-          </h6>
+          </div>
           <p>
             Nous passons notre vie à chercher le bonheur, et lorsque nous y
             touchons, nous n’avons qu’une envie : le figer au travers de
@@ -144,7 +189,7 @@
         </section>
       </article>
       <article id="gallery">
-        <h3 class="title">Portfolio</h3>
+        <h2 class="title">Portfolio</h2>
         <section class="container py-3">
           <div class="gallery" style="display: none">
             <img
@@ -215,32 +260,35 @@
         <section class="quote">
           <figure>
             <blockquote>
-              <h1 class="quote__text">
+              <div class="quote__text">
                 Un portrait n’est pas une ressemblance. Dès lors qu’une émotion
                 ou qu’un fait est traduit en photo, il cesse d’être un fait pour
                 devenir une opinion. L’inexactitude n’existe pas en
                 photographie. Toutes les photos sont exactes. Aucune d’elles
                 n’est la vérité.
-              </h1>
+              </div>
             </blockquote>
             <figcaption class="quote__author">- Richard Avedon</figcaption>
           </figure>
         </section>
       </article>
       <article id="services">
-        <h3 class="title">Mes services</h3>
+        <h2 class="title">Mes services</h2>
         <section class="container">
           <div class="service">
             <div class="service__description">
               <h3>Shooting photo</h3>
               <p>
                 Pour capturer vos moments les plus précieux et garder un
-                souvenir impérissable. Je me déplace en Île-de-France pour
-                réaliser vos photos
+                souvenir impérissable. Je me déplace en
+                <span itemprop="areaServed">Île-de-France</span> pour réaliser
+                vos photos
               </p>
             </div>
             <div class="service__price">
-              <h4>350€/demi journée</h4>
+              <h4>
+                350<span itemprop="currenciesAccepted">€</span>/demi journée
+              </h4>
               <span>Matériel, déplacement inclus</span>
             </div>
           </div>
@@ -276,11 +324,11 @@
       <article class="quote">
         <figure>
           <blockquote>
-            <h1 class="quote__text">
+            <div class="quote__text">
               De manière inconsciente, je crois, je guette un regard, une
               expression, des traits ou une nostalgie capable de résumer ou plus
               exactement de révéler une vie
-            </h1>
+            </div>
           </blockquote>
           <figcaption class="quote__author">- Richard Avedon</figcaption>
         </figure>
@@ -291,7 +339,7 @@
       <div id="contact">
         <div class="container">
           <div class="form-container">
-            <h3>Une question ? Une demande de devis ?</h3>
+            <h2>Une question ? Une demande de devis ?</h2>
             <p>
               N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
               heures
@@ -329,7 +377,29 @@
       defer
     ></script>
     <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
-    <script src="./assets/maugallery.js" defer></script>
-    <script src="./assets/scripts.js" defer></script>
+    <script src="./assets/maugallery.min.js" defer></script>
+    <script src="./assets/scripts.min.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Photographer",
+        "name": "Nina Carducci, Photographe",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "postalCode": "33200",
+          "addressCountry": "FR"
+        },
+        "telephone": "+33556677889",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      }
+    </script>
   </body>
 </html>
