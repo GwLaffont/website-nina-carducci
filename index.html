@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <meta charset="UTF-8" />
     <title>Site de Nina Carducci, Photographe à Bordeaux</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nina Carducci, Photographe à Bordeaux, se déplace en Île-de-France pour prendre vos photos."
+      content="Nina Carducci, Photographe à Bordeaux et sa région, se déplace en Île-de-France pour prendre vos photos."
     />
 
     <!-- Open graph card-->
@@ -57,14 +58,39 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
+
+    <!-- Données structurées -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "Photographer"],
+        "name": "Nina Carducci, Photographe",
+        "url": "https://gwlaffont.github.io/website-nina-carducci/",
+        "image": "https://gwlaffont.github.io/website-nina-carducci/assets/images/nina.webp",
+        "telephone": "+33-5-56-67-78-89",
+        "priceRange": "350€ - 400€",
+        "sameAs": "https://www.instagram.com/ninacarducci.photo/?hl=fr",
+        "areaServed": "Île-de-France",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "postalCode": "33200",
+          "addressCountry": "FR"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      }
+    </script>
   </head>
-  <body itemscope itemtype="https://schema.org/LocalBusiness">
-    <time itemprop="openingHours" datetime="Mo,Tu,We,Th,Fr 10:00-19:00"
-      >Du lundi au Vendredi, de 10 à 19 heures.</time
-    >.
+  <body>
     <header class="top-header">
-      <h1 class="name" itemprop="employee">Nina Carducci</h1>
+      <h1 class="name">Nina Carducci</h1>
       <nav class="nav">
         <ul>
           <li><a href="#about">À propos</a></li>
@@ -144,8 +170,10 @@
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="button-wrapper">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </span>
         </button>
         <button
           class="carousel-control-next"
@@ -153,8 +181,10 @@
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="button-wrapper">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </span>
         </button>
       </div>
     </div>
@@ -171,7 +201,7 @@
           <h2 class="about-me__title">A propos de moi</h2>
           <div class="about-me__introduction">
             Devenir photographe était pour moi une évidence. Comme si j’y étais
-            prédestiné. Saisir un moment, une émotion, une situation, un
+            prédestinée. Saisir un moment, une émotion, une situation, un
             endroit, une lumière et les rendre immortels, voilà ce qui me fait
             vibrer.
           </div>
@@ -286,9 +316,7 @@
               </p>
             </div>
             <div class="service__price">
-              <h4>
-                350<span itemprop="currenciesAccepted">€</span>/demi journée
-              </h4>
+              <h4>350€/demi journée</h4>
               <span>Matériel, déplacement inclus</span>
             </div>
           </div>
@@ -341,8 +369,7 @@
           <div class="form-container">
             <h2>Une question ? Une demande de devis ?</h2>
             <p>
-              N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24
-              heures
+              N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures
             </p>
             <form action="" method="post">
               <label for="nom">Nom</label>
@@ -379,27 +406,5 @@
     <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
     <script src="./assets/maugallery.min.js" defer></script>
     <script src="./assets/scripts.min.js" defer></script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Photographer",
-        "name": "Nina Carducci, Photographe",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "68 avenue Alsace-Lorraine",
-          "addressLocality": "Bordeaux",
-          "postalCode": "33200",
-          "addressCountry": "FR"
-        },
-        "telephone": "+33556677889",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "10:00",
-          "closes": "19:00"
-        }
-      }
-    </script>
   </body>
 </html>
